@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="SportLife — вдохновение для активной и здоровой жизни.">
   <title>SportLife — Главная</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -36,12 +39,26 @@
       <h2>Спорт меняет каждый день</h2>
       <p>Регулярная активность помогает чувствовать себя лучше — физически и эмоционально.</p>
     </div>
+    <div class="more-wrap">
+      <button id="showMore" class="button" type="button" aria-expanded="false" aria-controls="moreText">Подробнее</button>
+      <p id="moreText" class="more-text d-none">Начни с 10–15 минут движения в день: прогулка, зарядка или лёгкая пробежка. Когда привычка закрепится, добавляй время и новые активности.</p>
+    </div>
     <div class="feature-grid">
       <article class="feature-card"><div class="feature-icon">♡</div><h3>Здоровье</h3><p>Поддерживай организм и укрепляй полезные привычки.</p></article>
       <article class="feature-card"><div class="feature-icon">ϟ</div><h3>Энергия</h3><p>Больше движения — больше бодрости на каждый день.</p></article>
       <article class="feature-card"><div class="feature-icon">☺</div><h3>Настроение</h3><p>Найди свой способ переключиться и снять напряжение.</p></article>
       <article class="feature-card"><div class="feature-icon">↗</div><h3>Достижения</h3><p>Ставь реалистичные цели и радуйся своему прогрессу.</p></article>
     </div>
+  </section>
+
+  <section class="section soft-section" id="activities-section">
+    <div class="section-heading">
+      <p class="eyebrow">ВЫБЕРИ СВОЁ</p>
+      <h2>Популярные активности</h2>
+      <p>Подборка загружается из файла data/activities.json.</p>
+    </div>
+    <div id="activities" class="offer-grid" aria-live="polite"></div>
+    <p id="activities-error" class="form-status text-center"></p>
   </section>
 
   <section class="banner">
@@ -51,6 +68,5 @@
 </main>
 
 <footer class="site-footer"><a class="logo" href="index.html">✦ Sport<span>Life</span></a><p>Движение — привычка, которая вдохновляет.</p><small>© 2026 SportLife. Учебный проект.</small></footer>
-<script src="script.js"></script>
 </body>
 </html>
